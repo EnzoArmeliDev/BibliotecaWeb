@@ -1,0 +1,171 @@
+/* UNIVERSAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Play", sans-serif;
+    font-weight: 400;
+}
+
+a,
+a:visited,
+a:active,
+a:hover {
+  text-decoration: none;
+  color: rgb(240, 240, 240);
+}
+
+/* HEADER GENERAL */
+header {
+  padding: 0px 200px 0px 200px;
+  position: fixed;
+  width: 100%;
+  background-color: transparent;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+#logo {
+  font-size: 40px;
+  color: rgb(240, 240, 240);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* MENU PRINCIPAL */
+.menu-principal {
+  display: flex;
+  list-style: none;
+  position: relative;
+  gap: 50px;
+}
+
+.menu-principal > li {
+  position: relative; 
+}
+
+#elementopadre {
+  font-size: 18px;
+  color: rgb(235, 235, 235);
+  flex: 1;
+  padding: 10px 0px 10px 0px;
+  border-top: 1px solid rgb(150, 150, 150);
+}
+
+#elementopadre::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  height: 1px;
+  width: 100%;
+  border-top: 1px solid white;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.8s ease;
+}
+
+#elementopadre:hover::before {
+  transform: scaleX(1);
+}
+
+.header-scroll {
+  background-color: #222; 
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* SUBMENU */
+.menu-principal li:hover > .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  border: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease; /* velocidad de animación */
+  z-index: 100; /* por si lo necesitás sobre otros elementos */
+}
+
+.submenubody {
+  display: flex;
+}
+
+.submenubody li a {
+  font-size: 15px;
+  color: rgb(20, 20, 20);
+}
+
+.menu-principal li:hover > .submenu {
+  display: block;
+}
+
+#elementouno {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: rgb(20, 20, 20);
+  border-right: 1px solid rgb(125, 125, 125);
+  border-top: 0px;
+  background-color: rgb(235, 235, 235);
+  height: 250px;
+  width: 350px;
+  padding: 20px;
+}
+
+#elementodos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(235, 235, 235);
+  border-top: 0px;
+  height: 250px;
+  width: 350px;
+  padding: 20px;
+}
+
+.circulo {
+  width: 35px;
+  height: 35px;
+  background-color: rgb(128, 0, 0);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  transition: background-color 0.3s ease;
+}
+
+#elementouno:hover .circulo {
+  background-color: gray; /* o #ccc, #999, etc. */
+}
+
+#elementodos:hover .circulo {
+  background-color: gray; /* o #ccc, #999, etc. */
+}
+
+.flecha {
+  width: 15px;
+  height: 15px;
+  fill: white;
+}
+
+/* SECCIONES */
+.sectionUno {
+    height: 500px;
+    background-color: red;
+}
+
+.sectionDos {
+    height: 500px;
+    background-color: blue;
+}
+
+.sectionTres {
+    height: 500px;
+    background-color: green;
+}
